@@ -1,6 +1,9 @@
+import { CommonHeader } from "../../components";
 
 export default function HomePage() {
   return (
-    <div>HomePage</div>
-  )
+    <div>
+      <CommonHeader />
+    </div>
+  );
 }

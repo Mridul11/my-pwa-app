@@ -2,5 +2,6 @@ import { render } from "@testing-library/react";
 import AboutPage from "./about-page";
 
 test("should render", () => {
-  render(<AboutPage />);
+  const aboutElement = render(<AboutPage />);
+  expect(aboutElement).toBeTruthy();
 });
