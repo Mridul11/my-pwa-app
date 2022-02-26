@@ -1,6 +1,3 @@
-
 export default function NativeButton() {
-  return (
-    <div>NativeButton</div>
-  )
+  return <div>NativeButton</div>;
 }

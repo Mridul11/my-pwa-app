@@ -1,12 +1,8 @@
-import { Menu } from "antd";
-import {
-  MailOutlined,
-  AppstoreOutlined,
-  SettingOutlined,
-} from "@ant-design/icons";
-import SubMenu from "antd/lib/menu/SubMenu";
-import { useState } from "react";
-import styled from "styled-components";
+import { Menu } from 'antd';
+import { MailOutlined, AppstoreOutlined, SettingOutlined } from '@ant-design/icons';
+import SubMenu from 'antd/lib/menu/SubMenu';
+import { useState } from 'react';
+import styled from 'styled-components';
 
 const StyledCommonHeader = styled.div`
   background-color: #fff;
@@ -15,8 +11,8 @@ const StyledCommonHeader = styled.div`
   width: 100%;
 `;
 
-export default function CommonHeader() {
-  const [current, currentSet] = useState("mail");
+const CommonHeader = () => {
+  const [current, currentSet] = useState('mail');
   const handleClick = (e: React.MouseEvent<HTMLButtonElement> | any) => {
     currentSet(e.key);
   };
@@ -31,18 +27,10 @@ export default function CommonHeader() {
         <Menu.Item key="mail" icon={<MailOutlined />}>
           Navigation One
         </Menu.Item>
-        <Menu.Item
-          key="app"
-          icon={<AppstoreOutlined />}
-          data-testid="test-menu-item"
-        >
+        <Menu.Item key="app" icon={<AppstoreOutlined />} data-testid="test-menu-item">
           Navigation Two
         </Menu.Item>
-        <SubMenu
-          key="SubMenu"
-          icon={<SettingOutlined />}
-          title="Navigation Three - Submenu"
-        >
+        <SubMenu key="SubMenu" icon={<SettingOutlined />} title="Navigation Three - Submenu">
           <Menu.ItemGroup title="Item 1">
             <Menu.Item key="setting:1">Option 1</Menu.Item>
             <Menu.Item key="setting:2">Option 2</Menu.Item>
@@ -55,4 +43,6 @@ export default function CommonHeader() {
       </Menu>
     </StyledCommonHeader>
   );
-}
+};
+
+export default CommonHeader;

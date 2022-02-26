@@ -1,4 +1,4 @@
-import { CommonHeader } from "../../components";
+import { CommonHeader } from '../../components';
 
 export default function HomePage() {
   return (

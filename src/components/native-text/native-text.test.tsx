@@ -1,12 +1,12 @@
-import { render } from "@testing-library/react";
-import NativeText from "./native-text";
+import { render } from '@testing-library/react';
+import NativeText from './native-text';
 
-test("should render", () => {
+test('should render', () => {
   const nativeTextElement = render(<NativeText />);
   expect(nativeTextElement).toBeTruthy();
 });
 
-test("should render the text", () => {
+test('should render the text', () => {
   const { getByText } = render(<NativeText />);
-  expect(getByText("NativeText")).toBeTruthy();
+  expect(getByText('NativeText')).toBeTruthy();
 });
