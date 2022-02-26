@@ -1,7 +1,9 @@
-import { render } from "@testing-library/react";
+import { render, waitFor } from "@testing-library/react";
 import HomePage from "./home-page";
 
-test("should render", () => {
+test("should render", async () => {
   const homePageElement = render(<HomePage />);
-  expect(homePageElement).toBeTruthy();
+  await waitFor(() => {
+    expect(homePageElement).toBeTruthy();
+  });
 });

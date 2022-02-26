@@ -1,8 +1,10 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import App from "./App";
 
-test("renders the component with testid", () => {
+test("renders the component with testid", async () => {
   render(<App />);
   const testElement = screen.getByTestId("app-test");
-  expect(testElement).toBeInTheDocument();
+  await waitFor(() => {
+    expect(testElement).toBeInTheDocument();
+  });
 });
