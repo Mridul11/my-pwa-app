@@ -1,10 +1,4 @@
-import {
-  act,
-  fireEvent,
-  getByTestId,
-  render,
-  waitFor,
-} from "@testing-library/react";
+import { fireEvent, render, waitFor } from "@testing-library/react";
 import CommonHeader from "./common-header";
 
 test("should render", async () => {
@@ -16,7 +10,6 @@ test("should render", async () => {
 
 test("should render component", async () => {
   const { getByText } = render(<CommonHeader />);
-
   await waitFor(() => {
     expect(getByText("Navigation One")).toBeTruthy();
   });
@@ -32,7 +25,6 @@ test("should render PagesHeader", async () => {
 
 test("should work onclick", async () => {
   const { getByTestId } = render(<CommonHeader />);
-
   const testMenuButton = getByTestId("test-menu");
   fireEvent.click(testMenuButton);
   await waitFor(() => {
