@@ -1,6 +1,10 @@
 {
   "name": "my-pwa-app",
   "version": "0.1.0",
+  "author": {
+    "name": "Mridul Mishra",
+    "email": "mmisra2991@gmail.com"
+  },
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
