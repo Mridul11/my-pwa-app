@@ -6,6 +6,14 @@ import {
 } from "@ant-design/icons";
 import SubMenu from "antd/lib/menu/SubMenu";
 import { useState } from "react";
+import styled from "styled-components";
+
+const StyledCommonHeader = styled.div`
+  background-color: #fff;
+  padding: 0;
+  margin: 0 auto;
+  width: 100%;
+`;
 
 export default function CommonHeader() {
   const [current, currentSet] = useState("mail");
@@ -13,7 +21,7 @@ export default function CommonHeader() {
     currentSet(e.key);
   };
   return (
-    <div>
+    <StyledCommonHeader>
       <Menu
         onClick={handleClick}
         selectedKeys={[current]}
@@ -45,6 +53,6 @@ export default function CommonHeader() {
           </Menu.ItemGroup>
         </SubMenu>
       </Menu>
-    </div>
+    </StyledCommonHeader>
   );
 }
