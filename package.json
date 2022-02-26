@@ -43,7 +43,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint src",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix",
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
     "version": "auto-changelog -p && git add CHANGELOG.md"
   },
   "eslintConfig": {
@@ -69,6 +71,9 @@
     "@typescript-eslint/parser": "^5.12.1",
     "auto-changelog": "^2.4.0",
     "eslint": "^8.10.0",
-    "eslint-plugin-react": "^7.29.2"
+    "eslint-config-prettier": "^8.4.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.29.2",
+    "prettier": "^2.5.1"
   }
 }
